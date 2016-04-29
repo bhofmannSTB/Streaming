@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Testdatei</title>
+	</head>
+	<body>
+		<script src="node_modules/jquery/dist/jquery.js"></script>
+		<script type="text/javascript">
+		setInverval(function()
+		{
+			$ajax({
+				url:'live/test.m3u8',
+				type: 'HEAD',
+				error: function() {
+					alert("Datei nicht gefunden!")},
+				success: function() {
+					alert("Datei gefunden. Hurra!")}
+					});
+		}, 5000);
+		</script>
+	</body>
+</html>
